@@ -48,11 +48,11 @@ export default function HomePage() {
   const popular = services.filter((s) => s.popular).slice(0, 4);
 
   return (
-    <PageContainer className="pt-4 sm:pt-6">
+    <PageContainer className="pt-5 sm:pt-8">
       {/* Hero — palette pinned by the approved hero direction */}
       <section
         aria-labelledby="hero-heading"
-        className="relative overflow-hidden rounded-xl bg-[#fbfbf7] bg-[linear-gradient(115deg,#d5f2cd_0%,#eaf7e8_62%)] p-4 shadow-card sm:p-6 lg:p-8"
+        className="relative min-h-[360px] overflow-hidden rounded-2xl bg-[#fbfbf7] bg-[linear-gradient(115deg,#d5f2cd_0%,#eaf7e8_62%)] p-5 shadow-raised sm:min-h-[400px] sm:p-8 lg:p-10"
       >
         {/* Out-of-focus foliage, top-left corner */}
         <div
@@ -310,12 +310,15 @@ export default function HomePage() {
         </div>
 
         <div className="relative max-w-md md:max-w-lg">
-          <h1 id="hero-heading" className="display-xl text-ink">
+          <p className="mb-4 inline-flex rounded-full bg-canvas/70 px-3 py-1 text-caption font-semibold uppercase tracking-[0.14em] text-positive-deep">
+            Trusted home services
+          </p>
+          <h1 id="hero-heading" className="display-xl max-w-[520px] text-ink">
             Home repairs,{" "}
             <span className="block text-positive-deep">done right.</span>
           </h1>
-          <p className="mt-4 sm:text-body-md lg:text-body-lg text-body">
-            Book reliable technicians for all your home needs.
+          <p className="mt-4 max-w-md text-body-md text-body sm:text-body-lg">
+            Book reliable technicians for all your home needs, with clear pricing and support at every step.
           </p>
           <div className="mt-5 flex flex-nowrap gap-2 sm:gap-3">
             <LinkButton
@@ -341,8 +344,21 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="mt-4 grid grid-cols-3 gap-2 rounded-2xl border border-canvas bg-canvas p-3 shadow-card sm:mt-5 sm:grid-cols-3 sm:p-4">
+        {[
+          ["4.9/5", "customer rating"],
+          ["30-day", "workmanship cover"],
+          ["Same day", "slots available"],
+        ].map(([value, label]) => (
+          <div key={label} className="border-r border-canvas-soft px-2 last:border-0 sm:px-4">
+            <p className="text-body-md-strong text-ink sm:text-body-lg">{value}</p>
+            <p className="mt-0.5 text-caption text-mute sm:text-body-sm">{label}</p>
+          </div>
+        ))}
+      </div>
+
       {/* Categories */}
-      <section aria-label="Browse categories" className="mt-8">
+      <section aria-label="Browse categories" className="mt-10">
         <SectionHeading
           title="Browse categories"
           action="View all"

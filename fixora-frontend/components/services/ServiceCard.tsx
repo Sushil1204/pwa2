@@ -11,7 +11,7 @@ export function ServiceCard({ service }: { service: Service }) {
   return (
     <Link
       href={`/services/${service.slug}`}
-      className="group flex h-full items-center gap-3 rounded-xl bg-canvas p-3 shadow-card transition-transform duration-fast ease-out-soft hover:-translate-y-0.5 focus-visible:-translate-y-0.5"
+      className="group flex h-full items-center gap-3 rounded-2xl border border-transparent bg-canvas p-3 shadow-card transition-[border-color,box-shadow,transform] duration-fast ease-out-soft hover:-translate-y-0.5 hover:border-primary-neutral hover:shadow-raised focus-visible:-translate-y-0.5"
     >
       <div className="h-16 w-20 shrink-0 overflow-hidden rounded-md">
         <ServiceArt variant={service.illustration} className="h-full w-full" />
@@ -49,7 +49,7 @@ export function ServiceCategoryCard({
   return (
     <Link
       href={`/services?category=${slug}`}
-      className="group flex flex-col gap-2 rounded-xl bg-canvas p-3 text-center shadow-card transition-transform duration-fast ease-out-soft hover:-translate-y-0.5 focus-visible:-translate-y-0.5"
+      className="group flex flex-col gap-2 rounded-2xl border border-transparent bg-canvas p-3 text-center shadow-card transition-[border-color,box-shadow,transform] duration-fast ease-out-soft hover:-translate-y-0.5 hover:border-primary-neutral hover:shadow-raised focus-visible:-translate-y-0.5"
     >
       <span className="block aspect-square w-full overflow-hidden rounded-md">
         <ServiceArt variant={illustration} className="h-full w-full" />
