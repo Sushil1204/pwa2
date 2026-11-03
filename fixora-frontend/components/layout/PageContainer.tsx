@@ -70,7 +70,7 @@ export function PageHeader({
             </svg>
           </Link>
         )}
-        <h1 className="truncate text-page-title text-ink">
+        <h1 className="text-page-title text-ink [overflow-wrap:anywhere]">
           {title}
         </h1>
       </div>

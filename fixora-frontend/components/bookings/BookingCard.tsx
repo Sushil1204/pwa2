@@ -14,8 +14,8 @@ export function BookingCard({ booking }: { booking: Booking }) {
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex items-start justify-between gap-2">
-            <h3 className="truncate text-body-md-strong text-ink">{booking.serviceName}</h3>
-            <BookingStatusBadge status={booking.status} />
+            <h3 className="min-w-0 [overflow-wrap:anywhere] text-body-md-strong text-ink">{booking.serviceName}</h3>
+            <span className="shrink-0"><BookingStatusBadge status={booking.status} /></span>
           </div>
           <p className="mt-1 text-body-sm text-body">
             {formatDateLong(booking.scheduledDate)} · {booking.timeSlot}

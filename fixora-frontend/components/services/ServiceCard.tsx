@@ -17,7 +17,7 @@ export function ServiceCard({ service }: { service: Service }) {
         <ServiceArt variant={service.illustration} className="h-full w-full" />
       </div>
       <div className="min-w-0 flex-1">
-        <h3 className="line-clamp-1 text-body-md-strong text-ink">{service.name}</h3>
+        <h3 className="text-body-md-strong text-ink [overflow-wrap:anywhere]">{service.name}</h3>
         <p className="line-clamp-2 text-body-sm text-body">{service.description}</p>
         <p className="mt-0.5 text-body-sm-strong text-ink tnum">
           {service.pricingModel === "custom_quote"
@@ -51,7 +51,7 @@ export function ServiceCategoryCard({
       href={`/services?category=${slug}`}
       className="group flex flex-col gap-2 rounded-2xl border border-transparent bg-canvas p-3 text-center shadow-card transition-[border-color,box-shadow,transform] duration-fast ease-out-soft hover:-translate-y-0.5 hover:border-primary-neutral hover:shadow-raised focus-visible:-translate-y-0.5"
     >
-      <span className="block aspect-square w-full overflow-hidden rounded-md">
+      <span className="block aspect-square w-full overflow-hidden rounded-xl bg-canvas-soft">
         <ServiceArt variant={illustration} className="h-full w-full" />
       </span>
       <span className="text-body-sm-strong text-ink">{name}</span>

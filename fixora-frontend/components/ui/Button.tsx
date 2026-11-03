@@ -12,7 +12,7 @@ type Variant =
 type Size = "md" | "sm" | "icon";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-md text-button-md transition-[background-color,color,transform,box-shadow] duration-fast ease-out-soft select-none disabled:pointer-events-none disabled:bg-canvas-soft disabled:text-body disabled:shadow-none disabled:border-transparent active:scale-[0.98]";
+  "inline-flex items-center justify-center gap-2 rounded-xl text-button-md transition-[background-color,color,transform,box-shadow] duration-fast ease-out-soft select-none disabled:pointer-events-none disabled:bg-canvas-soft disabled:text-body disabled:shadow-none disabled:border-transparent active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink";
 
 const variants: Record<Variant, string> = {
   primary: "bg-primary text-on-primary hover:bg-primary-active shadow-card",
