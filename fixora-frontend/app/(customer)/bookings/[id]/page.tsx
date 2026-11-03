@@ -122,9 +122,9 @@ function BookingDetailContent() {
               <ServiceArt variant={booking.illustration} className="h-full w-full" />
             </div>
             <div className="min-w-0">
-              <h1 className="text-body-md-strong text-ink [overflow-wrap:anywhere]">
+              <h2 className="text-body-md-strong text-ink [overflow-wrap:anywhere]">
                 {booking.serviceName}
-              </h1>
+              </h2>
               <p className="mt-0.5 text-body-sm text-body">
                 {formatDateLong(booking.scheduledDate)} · {booking.timeSlot}
               </p>

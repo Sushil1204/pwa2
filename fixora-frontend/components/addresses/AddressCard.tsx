@@ -21,7 +21,7 @@ export function AddressCard({
       <div className="flex items-start justify-between gap-3">
         <div className="flex min-w-0 items-center gap-2">
           <span
-            className={`inline-flex items-center rounded-full px-3 py-0.5 text-caption font-semibold ${
+            className={`inline-flex items-center rounded-full px-3 py-0.5 text-body-sm-strong ${
               address.isDefault ? "bg-primary text-on-primary" : "bg-canvas-soft text-ink"
             }`}
           >

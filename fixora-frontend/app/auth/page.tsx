@@ -85,7 +85,7 @@ function AuthContent() {
         <div className="rounded-xl bg-canvas p-6 shadow-card">
           {phase === "phone" ? (
             <>
-              <h1 className="display-md text-ink">Sign in to Fixora</h1>
+              <h1 className="text-page-title text-ink">Sign in to Fixora</h1>
               <p className="mt-2 text-body-sm text-body">
                 Enter your mobile number and we&apos;ll text you a one-time code.
               </p>
@@ -117,7 +117,7 @@ function AuthContent() {
             </>
           ) : (
             <>
-              <h1 className="display-md text-ink">Enter the code</h1>
+              <h1 className="text-page-title text-ink">Enter the code</h1>
               <p className="mt-2 flex items-center gap-2 text-body-sm text-body">
                 <Smartphone className="h-4 w-4 shrink-0" aria-hidden />
                 Sent to <span className="font-semibold text-ink">{phone}</span>

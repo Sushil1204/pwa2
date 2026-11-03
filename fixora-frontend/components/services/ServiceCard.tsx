@@ -54,7 +54,7 @@ export function ServiceCategoryCard({
       <span className="block aspect-square w-full overflow-hidden rounded-md">
         <ServiceArt variant={illustration} className="h-full w-full" />
       </span>
-      <span className="text-caption text-ink">{name}</span>
+      <span className="text-body-sm-strong text-ink">{name}</span>
       <span className="sr-only">{description}</span>
     </Link>
   );

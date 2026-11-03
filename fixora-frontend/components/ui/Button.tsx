@@ -2,11 +2,17 @@ import Link from "next/link";
 import { Loader2 } from "lucide-react";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
-type Variant = "primary" | "secondary" | "tertiary" | "dark" | "ghost" | "danger";
+type Variant =
+  | "primary"
+  | "secondary"
+  | "tertiary"
+  | "dark"
+  | "ghost"
+  | "danger";
 type Size = "md" | "sm" | "icon";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-xl text-button-md transition-[background-color,color,transform,box-shadow] duration-fast ease-out-soft select-none disabled:pointer-events-none disabled:bg-canvas-soft disabled:text-body disabled:shadow-none disabled:border-transparent active:scale-[0.98]";
+  "inline-flex items-center justify-center gap-2 rounded-md text-button-md transition-[background-color,color,transform,box-shadow] duration-fast ease-out-soft select-none disabled:pointer-events-none disabled:bg-canvas-soft disabled:text-body disabled:shadow-none disabled:border-transparent active:scale-[0.98]";
 
 const variants: Record<Variant, string> = {
   primary: "bg-primary text-on-primary hover:bg-primary-active shadow-card",
@@ -35,7 +41,10 @@ interface ButtonProps extends CommonProps {
   ref?: React.Ref<HTMLButtonElement>;
 }
 
-type ButtonNativeProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, "children" | "className">;
+type ButtonNativeProps = Omit<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  "children" | "className"
+>;
 
 export function Button({
   variant = "primary",

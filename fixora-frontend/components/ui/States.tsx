@@ -39,7 +39,7 @@ export function EmptyState({
       <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-pale">
         <Icon className="h-6 w-6 text-ink" aria-hidden />
       </span>
-      <h2 className="text-body-md-strong text-ink">{title}</h2>
+      <h2 className="text-display-xs text-ink">{title}</h2>
       <p className="max-w-xs text-body-sm text-body">{body}</p>
       {action && <div className="mt-2">{action}</div>}
     </div>
@@ -63,7 +63,7 @@ export function ErrorState({
       <span className="flex h-12 w-12 items-center justify-center rounded-full bg-negative-bg">
         <AlertTriangle className="h-6 w-6 text-negative" aria-hidden />
       </span>
-      <h2 className="text-body-md-strong text-ink">{title}</h2>
+      <h2 className="text-display-xs text-ink">{title}</h2>
       <p className="max-w-xs text-body-sm text-body">{body}</p>
       {onRetry && (
         <Button variant="secondary" size="sm" onClick={onRetry} className="mt-1">

@@ -80,7 +80,7 @@ export function ConfirmationDialog({
         aria-describedby="confirm-body"
         className="relative m-4 w-full max-w-sm rounded-xl bg-canvas p-6 shadow-raised"
       >
-        <h2 id="confirm-title" className="display-md text-ink">
+        <h2 id="confirm-title" className="text-display-xs text-ink">
           {title}
         </h2>
         <p id="confirm-body" className="mt-3 text-body-sm text-body">

@@ -34,7 +34,7 @@ function BottomNavFallback() {
         {navItems.map((label) => (
           <li key={label} className="flex flex-1 flex-col items-center justify-center gap-1">
             <span className="h-5 w-5 rounded-full bg-canvas-soft" />
-            <span className="text-caption text-mute">{label}</span>
+            <span className="text-body-sm text-body">{label}</span>
           </li>
         ))}
       </ul>

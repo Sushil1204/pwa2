@@ -17,7 +17,7 @@ export function Brand({ className = "" }: { className?: string }) {
   return (
     <span className={`inline-flex items-center gap-2 ${className}`}>
       <LogoMark className="h-8 w-8" />
-      <span className="text-lg font-black tracking-tight text-ink">Fixora</span>
+      <span className="text-body-lg font-black tracking-tight text-ink">Fixora</span>
     </span>
   );
 }

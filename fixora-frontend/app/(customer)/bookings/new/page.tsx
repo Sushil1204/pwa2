@@ -198,7 +198,7 @@ function BookingForm() {
           <span className="relative flex h-24 w-24 items-center justify-center rounded-full bg-primary-pale">
             <CheckCircle2 className="h-14 w-14 text-positive" aria-hidden strokeWidth={2.2} />
           </span>
-          <h1 className="display-lg mt-6 text-ink">Booking confirmed!</h1>
+          <h1 className="display-md mt-6 text-ink">Booking confirmed!</h1>
           <p className="mt-3 text-body-lg text-body">
             Your service has been booked successfully. We&apos;ll notify you when a
             technician is assigned.

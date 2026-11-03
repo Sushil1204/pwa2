@@ -67,7 +67,7 @@ export function AppHeader() {
           {unreadCount > 0 && (
             <span
               aria-hidden
-              className="absolute right-1.5 top-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-negative px-1 text-[10px] font-semibold leading-none text-canvas"
+              className="absolute right-1.5 top-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-negative px-1 text-caption font-semibold text-canvas"
             >
               {unreadCount > 9 ? "9+" : unreadCount}
             </span>

@@ -39,7 +39,8 @@
 
   /* Typography */
   --font-sans: var(--font-inter), Inter, system-ui, -apple-system, sans-serif;
-  --font-display: var(--font-inter), Inter, system-ui, -apple-system, sans-serif;
+  --font-display:
+    var(--font-inter), Inter, system-ui, -apple-system, sans-serif;
 
   /* Radii — design.md rounded scale */
   --radius-sm: 8px;
@@ -120,7 +121,14 @@ select {
   background: transparent;
 }
 
-/* Display voice — Wise Sans substitute: Inter at weight 900 for display-mega through display-md; Inter at weight 400 for display-lg; Inter at weight 600 for display-sm and display-xs */
+/* Display voice — Wise Sans substitute: Inter at weight 900 for display-mega through display-md; Inter at weight 400 for display-lg; Inter at weight 600 for display-sm and display-xs
+ *
+ * Leading note: design.md pins display-md (40/34) and display-xl (64/54.4) at a
+ * 0.85 stencil ratio tuned for Wise Sans. The Inter substitute has a taller ink
+ * box (~1.21em), so at that ratio two rendered lines collide. Where those tokens
+ * can wrap, leading is raised to 1.05 — the same relative value the responsive
+ * rules below already use for these tokens. Sizes and weights stay token-exact.
+ */
 .display-mega,
 .display-xxl,
 .display-xl,
@@ -149,7 +157,7 @@ select {
 .display-xl {
   font-size: 64px;
   font-weight: 900;
-  line-height: 54.4px;
+  line-height: 67.2px;
   letter-spacing: 0;
 }
 
@@ -163,7 +171,7 @@ select {
 .display-md {
   font-size: 40px;
   font-weight: 900;
-  line-height: 34px;
+  line-height: 42px;
   letter-spacing: 0;
 }
 
@@ -301,7 +309,7 @@ select {
   font-family: var(--font-display);
   font-size: 64px;
   font-weight: 900;
-  line-height: 54.4px;
+  line-height: 67.2px;
   letter-spacing: 0;
   text-wrap: balance;
 }
@@ -319,7 +327,7 @@ select {
   font-family: var(--font-display);
   font-size: 40px;
   font-weight: 900;
-  line-height: 34px;
+  line-height: 42px;
   letter-spacing: 0;
   text-wrap: balance;
 }
@@ -409,6 +417,12 @@ select {
 
 @utility text-button-md {
   font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+@utility text-button-sm {
+  font-size: 14px;
   line-height: 24px;
   font-weight: 600;
 }

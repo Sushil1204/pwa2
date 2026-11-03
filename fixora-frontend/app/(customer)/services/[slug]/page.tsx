@@ -20,7 +20,7 @@ function ServiceDetailContent() {
   if (loading) {
     return (
       <PageContainer className="pt-4">
-        <PageHeader title="Service" backHref="/services" />
+        <PageHeader title="Service details" backHref="/services" />
         <Skeleton className="h-48 rounded-xl" />
         <Skeleton className="mt-4 h-8 w-2/3 rounded-lg" />
         <Skeleton className="mt-3 h-5 w-1/2 rounded-lg" />
@@ -32,7 +32,7 @@ function ServiceDetailContent() {
   if (!service) {
     return (
       <PageContainer className="pt-4">
-        <PageHeader title="Service" backHref="/services" />
+        <PageHeader title="Service details" backHref="/services" />
         <ErrorState
           title="Service not found"
           body="This service may have been removed or the link is incorrect."
@@ -55,7 +55,7 @@ function ServiceDetailContent() {
 
   return (
     <PageContainer className="pt-4">
-      <PageHeader title={service.name} backHref="/services" />
+      <PageHeader title="Service details" backHref="/services" />
 
       <div className="overflow-hidden rounded-xl bg-canvas shadow-card">
         <div className="h-44 sm:h-56">
@@ -63,9 +63,9 @@ function ServiceDetailContent() {
         </div>
 
         <div className="p-5 sm:p-6">
-          <h1 className="display-md text-ink">{service.name}</h1>
+          <h2 className="display-sm text-ink">{service.name}</h2>
           <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
-            <p className="text-body-lg font-semibold text-ink tnum">{priceLabel}</p>
+            <p className="text-display-xs text-ink tnum">{priceLabel}</p>
             <p className="inline-flex items-center gap-1.5 text-body-sm text-body">
               <Clock className="h-4 w-4" aria-hidden />
               ~{Math.round(service.durationMins / 60) || 1} hr estimated
@@ -77,11 +77,11 @@ function ServiceDetailContent() {
             )}
           </div>
 
-          <p className="mt-4 text-body-md text-body">{service.longDescription}</p>
+          <p className="mt-4 max-w-2xl text-body-md text-body">{service.longDescription}</p>
 
           <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div>
-              <h2 className="text-body-md-strong text-ink">What&apos;s included</h2>
+              <h3 className="text-body-md-strong text-ink">What&apos;s included</h3>
               <ul className="mt-3 space-y-2">
                 {service.includes.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-body-sm text-body">
@@ -94,7 +94,7 @@ function ServiceDetailContent() {
               </ul>
             </div>
             <div>
-              <h2 className="text-body-md-strong text-ink">Not included</h2>
+              <h3 className="text-body-md-strong text-ink">Not included</h3>
               <ul className="mt-3 space-y-2">
                 {service.excludes.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-body-sm text-body">
@@ -139,7 +139,7 @@ function ServiceDetailContent() {
 function ServiceDetailFallback() {
   return (
     <PageContainer className="pt-4">
-      <PageHeader title="Service" backHref="/services" />
+      <PageHeader title="Service details" backHref="/services" />
       <Skeleton className="h-48 rounded-xl" />
       <Skeleton className="mt-4 h-8 w-2/3 rounded-lg" />
       <Skeleton className="mt-6 h-40 rounded-xl" />

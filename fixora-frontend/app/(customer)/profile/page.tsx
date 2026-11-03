@@ -157,7 +157,7 @@ export default function ProfilePage() {
           <div className="relative mx-auto h-24 w-24">
             <span
               aria-hidden
-              className="flex h-24 w-24 items-center justify-center rounded-full border-4 border-[#c9e7c0] bg-white text-3xl font-black text-[#16703a]"
+              className="flex h-24 w-24 items-center justify-center rounded-full border-4 border-[#c9e7c0] bg-white text-display-sm font-black text-[#16703a]"
             >
               {initials(profile.name)}
             </span>
@@ -188,7 +188,7 @@ export default function ProfilePage() {
             href="/profile/edit"
             variant="tertiary"
             size="sm"
-            className="rounded-full! font-bold!"
+            className="rounded-full!"
           >
             <Pencil className="h-4 w-4" aria-hidden />
             Edit Profile
@@ -206,11 +206,11 @@ export default function ProfilePage() {
                 className="flex items-center gap-3 px-4 py-3.5 transition-colors hover:bg-canvas-soft/50"
               >
                 <Icon className="h-5 w-5 shrink-0 text-ink" aria-hidden />
-                <span className="flex-1 text-body-sm text-ink">{label}</span>
+                <span className="flex-1 text-body-sm-strong text-ink">{label}</span>
                 {badge ? (
                   <span
                     aria-label={`${badge} unread`}
-                    className="flex h-5 min-w-5 items-center justify-center rounded-full bg-negative px-1.5 text-caption text-canvas"
+                    className="flex h-5 min-w-5 items-center justify-center rounded-full bg-negative px-1.5 text-caption font-semibold text-canvas"
                   >
                     {badge}
                   </span>

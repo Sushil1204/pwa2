@@ -19,7 +19,7 @@ export function BookingStatusBadge({ status }: { status: BookingStatus }) {
   const { label, className } = styles[status];
   return (
     <span
-      className={`inline-flex items-center rounded-full px-3 py-1 text-caption ${className}`}
+      className={`inline-flex items-center rounded-full px-3 py-1 text-body-sm-strong ${className}`}
     >
       {label}
     </span>
