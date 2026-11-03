@@ -82,7 +82,7 @@ function AuthContent() {
           <Brand />
         </Link>
 
-        <div className="rounded-xl bg-canvas p-6 shadow-card">
+        <div className="rounded-2xl bg-canvas p-5 shadow-card sm:p-6">
           {phase === "phone" ? (
             <>
               <h1 className="text-page-title text-ink">Sign in to Fixora</h1>
@@ -143,7 +143,7 @@ function AuthContent() {
                       placeholder="123456"
                       value={otp}
                       onChange={(e) => setOtp(e.target.value.replace(/\D/g, ""))}
-                      className="w-full rounded-md border border-ink bg-canvas px-4 py-3 text-center text-body-lg font-semibold tracking-[0.4em] text-ink placeholder:tracking-normal placeholder:text-mute focus:outline-none focus-visible:outline-2 focus-visible:outline-ink tnum"
+                      className="w-full rounded-xl border border-ink bg-canvas px-4 py-3 text-center text-body-lg font-semibold tracking-[0.4em] text-ink placeholder:tracking-normal placeholder:text-mute focus:outline-none focus-visible:outline-2 focus-visible:outline-ink tnum"
                     />
                   )}
                 </FormField>
@@ -158,7 +158,7 @@ function AuthContent() {
                       setOtp("");
                       setError("");
                     }}
-                    className="text-body underline underline-offset-4 hover:text-ink"
+                    className="min-h-11 py-2 text-body underline underline-offset-4 hover:text-ink"
                   >
                     Change number
                   </button>
