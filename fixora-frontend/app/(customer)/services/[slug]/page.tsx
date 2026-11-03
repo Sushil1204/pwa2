@@ -126,7 +126,7 @@ function ServiceDetailContent() {
         </div>
       </div>
 
-      <div className="sticky bottom-[calc(var(--bottom-nav-height)+12px+env(safe-area-inset-bottom))] z-30 mt-4 md:bottom-4">
+      <div className="sticky bottom-[calc(var(--bottom-nav-height)+12px+env(safe-area-inset-bottom))] z-30 -mx-1 mt-4 rounded-full bg-canvas/90 p-1 backdrop-blur-md md:bottom-4 md:mx-0 md:bg-transparent md:p-0 md:backdrop-blur-none">
         <LinkButton href={bookHref} className="w-full shadow-raised">
           Book Now
           <ArrowRight className="h-5 w-5" aria-hidden />
